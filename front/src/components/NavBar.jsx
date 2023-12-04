@@ -9,7 +9,7 @@ export default function NavBar() {
     const {authenticated, logout, admin} = useContext(Context)
     console.log(admin)
   return (
-    <nav className="flex px-24 h-16 border-b-2 border-purple-500 justify-between items-center">
+    <nav className="px-24 flex gap-96 h-16 border-b-2 border-purple-500 justify-center items-center">
         <div className="logo flex items-center gap-4 text-xl">
             <BsFillMortarboardFill className="text-4xl text-purple-500"/>
             <h1>Academic News</h1>
