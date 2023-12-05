@@ -67,7 +67,7 @@ export default function CreateNotice() {
   return (
         <div className='flex'>
             <Options/>
-            <section className='main flex w-full justify-center items-center'>
+            <section className='main py-12 flex w-full justify-center items-center'>
                 <form onSubmit={EnviarNoticia} action="" className='flex flex-col gap-2 flex-wrap'>
                     <label className='flex flex-col'>
                       <span>Título:</span>
@@ -85,7 +85,7 @@ export default function CreateNotice() {
                     </label>
                     <label htmlFor="" className='flex flex-col gap-2'>
                       <span>Corpo:</span>
-                      <textarea className='border-2 border-purple-500' name="" id="" cols="60" rows="20"
+                      <textarea className='border-2 border-purple-500' name="" id="" cols="60" rows="15"
                           value={body}
                           onChange={e => setBody(e.target.value)}
                         ></textarea>
@@ -94,7 +94,7 @@ export default function CreateNotice() {
                         <span>Imagem:</span>
                         <input type="file" onChange={e => setImage(e.target.files[0])}/>
                     </label>
-                    <button type='submit'>Enviar</button>
+                    <button type='submit' className='bg-black text-white h-10'>Enviar</button>
                     {error !== null && error === true && <button className='bg-red-500 h-10 px-4 text-white font-bold'>{message}</button>}
                     {error !== null && error === false && <button className='bg-green-500 h-10 px-4 text-white font-bold'>{message}</button>}
                 </form>

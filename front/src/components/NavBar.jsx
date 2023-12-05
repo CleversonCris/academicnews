@@ -27,6 +27,7 @@ export default function NavBar() {
             <li>
                 <Link to='/parcerias'>Parcerias</Link>
             </li>
+            {authenticated && admin && <button className="text-purple-500 font-medium"><Link to='/dashboard/createnotice'>Dashboard</Link></button>}
         </ul>
         <div className="actions flex gap-4 font-bold">
             {!authenticated && <button className="bg-purple-500 px-6 py-2  text-white"><Link to='/'>Registar</Link></button>}
